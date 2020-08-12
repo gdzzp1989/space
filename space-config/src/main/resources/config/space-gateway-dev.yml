@@ -1,0 +1,8 @@
+# 不校验验证码终端
+ignore:
+  gateway-prefix: space
+  clients:
+    - test  # 平台swagger
+    - app  # app
+  swagger-providers:
+    - space-auth

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.springframework.cloud.openfeign.HystrixFeignTargeterConfiguration,\
+  com.zcloud.space.common.security.feign.FeignConfiguration,\
+  com.zcloud.space.common.security.service.MyUserDetailsServiceImpl

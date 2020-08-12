@@ -1,0 +1,9 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.zcloud.space.common.data.cache.RedisTemplateConfig,\
+    com.zcloud.space.common.data.cache.RedisCacheManagerConfig,\
+    com.zcloud.space.common.data.cache.RedisCacheAutoConfiguration,\
+    com.zcloud.space.common.data.tenant.TenantConfigProperties,\
+    com.zcloud.space.common.data.tenant.TenantContextHolderFilter,\
+    com.zcloud.space.common.data.tenant.FeignTenantConfiguration,\
+    com.zcloud.space.common.data.mybatis.MyMetaObjectHandler,\
+    com.zcloud.space.common.data.mybatis.MybatisPlusConfig

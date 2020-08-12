@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-cloud-dependencies-parent</artifactId>
+        <groupId>org.springframework.cloud</groupId>
+        <version>2.1.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>space-common-bom</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <description>公共版本控制</description>
+
+    <properties>
+        <space.version>1.0.0</space.version>
+        <jackson.modules>2.9.6</jackson.modules>
+        <mybatis-plus.version>3.0.6</mybatis-plus.version>
+        <mysql.connector.version>8.0.15</mysql.connector.version>
+        <swagger.core.version>1.5.22</swagger.core.version>
+        <swagger.version>2.9.2</swagger.version>
+        <hutool.version>4.3.2</hutool.version>
+        <poi.version>4.1.0</poi.version>
+        <pinyin4j.version>2.5.0</pinyin4j.version>
+        <ttl.version>2.10.1</ttl.version>
+        <kaptcha.version>0.0.9</kaptcha.version>
+        <orika.version>1.4.6</orika.version>
+        <commons.lang3.version>3.9</commons.lang3.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--space common 依赖-->
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-common-core</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-common-data</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-common-swagger</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-common-gateway</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-common-security</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <!--space api 依赖-->
+            <dependency>
+                <groupId>com.zcloud</groupId>
+                <artifactId>space-upms-api</artifactId>
+                <version>${space.version}</version>
+            </dependency>
+            <!--swagger 依赖-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!-- 实体映射工具 -->
+            <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-core</artifactId>
+                <version>${orika.version}</version>
+            </dependency>
+            <!--验证码-->
+            <dependency>
+                <groupId>com.github.axet</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--hutool-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!--TTL-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${ttl.version}</version>
+            </dependency>
+            <!-- 拼音 -->
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${pinyin4j.version}</version>
+            </dependency>
+            <!--jackson模块-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-modules-java8</artifactId>
+                <version>${jackson.modules}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--mybatis plus extension,包含了mybatis plus core-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--mybatis-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--mysql 驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <!--swagger 最新依赖内置版本-->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons.lang3.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

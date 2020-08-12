@@ -1,0 +1,34 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: @artifactId@
+  profiles:
+    active: native
+  # 配置中心
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://space:space@localhost:9000/eureka/
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info
+  file: ./logs/${spring.application.name}/debug.log

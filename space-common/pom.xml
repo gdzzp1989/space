@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.zcloud</groupId>
+        <artifactId>space</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>space-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>公共聚合模块</description>
+    <modules>
+        <module>space-common-bom</module>
+        <module>space-common-core</module>
+        <module>space-common-data</module>
+        <module>space-common-swagger</module>
+        <module>space-common-gateway</module>
+        <module>space-common-security</module>
+    </modules>
+</project>
